@@ -1,82 +1,10 @@
-  GNU nano 5.8         .github/workflows/build_and_deploy.yml         Modified
-  GNU nano 5.8         .github/workflows/build_and_deploy.yml
+name: Build Flutter APK
 
 on:
   push:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.22.0'
-      - run: flutter pub get
-      - run: flutter build apk --release
-      - uses: actions/upload-artifact@v3
-        with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
-
-^G Help      ^O Write Out ^W Where Is  ^K Cut       ^T Execute   ^C Location
-^X Exit      ^R Read File ^\ Replace   ^U Paste     ^J Justify   ^/ Go To Line
-  GNU nano 5.8         .github/workflows/build_and_deploy.yml
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.22.0'
-      - run: flutter pub get
-      - run: flutter build apk --release
-      - uses: actions/upload-artifact@v3
-        with:
-          name: release-apk
-          path: build/app/outputs/flutter-apk/app-release.apk
-
-
-^G Help      ^O Write Out ^W Where Is  ^K Cut       ^T Execute   ^C Location
-^X Exit      ^R Read File ^\ Replace   ^U Paste     ^J Justify   ^/ Go To Line
-  GNU nano 5.8         .github/workflows/build_and_deploy.yml         Modified
-uses: actions/checkout@v3
-
-name: Flutter Build APK
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: '3.22.0'
-      - run: flutter pub get
-      - run: flutter build apk --release
-      - uses: actions/upload-artifact@v3
-        with:
-
-^G Help      ^O Write Out ^W Where Is  ^K Cut       ^T Execute   ^C Location
-^X Exit      ^R Read File ^\ Replace   ^U Paste     ^J Justify   ^/ Go To Line
-uses: actions/checkout@v3
-
-name: Flutter Build APK
-
-on:
-  push:
-    branches: [ main ]
+    branches:
+      - main
+  pull_request:
 
 jobs:
   build:
