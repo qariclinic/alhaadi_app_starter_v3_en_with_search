@@ -1,0 +1,15 @@
+
+name: alhaadi_app
+description: Al-Haadi app with Quran+English translation and search
+publish_to: 'none'
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/data/quran.json
+    - assets/data/hadith.json

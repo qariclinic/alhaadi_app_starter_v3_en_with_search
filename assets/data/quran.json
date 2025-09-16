@@ -1,0 +1,40 @@
+{
+  "surahs": [
+    {
+      "number": 1,
+      "name": "الفاتحہ",
+      "ayahs": [
+        {
+          "number": 1,
+          "arabic": "بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ",
+          "urdu": "",
+          "english": "In the name of Allah, the Entirely Merciful, the Especially Merciful."
+        },
+        {
+          "number": 2,
+          "arabic": "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+          "urdu": "",
+          "english": "All praise is due to Allah, Lord of the worlds."
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "name": "البقرہ",
+      "ayahs": [
+        {
+          "number": 1,
+          "arabic": "الم",
+          "urdu": "",
+          "english": "Alif, Lam, Meem."
+        },
+        {
+          "number": 2,
+          "arabic": "ذَٰلِكَ الْكِتَابُ لَا رَيْبَ فِيهِ",
+          "urdu": "",
+          "english": "This is the Book about which there is no doubt."
+        }
+      ]
+    }
+  ]
+}
