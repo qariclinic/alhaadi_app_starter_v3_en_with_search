@@ -1,4 +1,3 @@
-
 name: Build Flutter APK
 
 on:
@@ -13,33 +12,21 @@ jobs:
 
     steps:
       # Checkout source code
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      # Setup Java (JDK 17 is recommended for Flutter)
-      - name: Setup Java
-        uses: actions/setup-java@v4
-        with:
-          distribution: 'temurin'
-          java-version: '17'
+      - uses: actions/checkout@v4
 
       # Setup Flutter
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.24.3' # یا جو بھی ورژن آپ کا ہے
+          flutter-version: '3.22.0'
 
       # Get dependencies
-      - name: Install dependencies
-        run: flutter pub get
+      - run: flutter pub get
 
-      # Build APK (release mode)
-      - name: Build release APK
-        run: flutter build apk --release
+      # Build release APK
+      - run: flutter build apk --release
 
       # Upload generated APK
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: app-release
+          name: release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
